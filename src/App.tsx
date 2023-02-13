@@ -13,7 +13,7 @@ const App: FC = () => {
     const newSize = Number(e.target.value);
 
     if (!Number.isNaN(newSize)) {
-      setSize(clamp(newSize, 0, 500));
+      setSize(clamp(newSize, 0, 99));
     }
   };
 
