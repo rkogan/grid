@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC, useState, ChangeEvent } from "react";
+import "./App.css";
+import Grid from "./components/Grid";
 
-function App() {
+const clamp = (num: number, min: number, max: number) =>
+  Math.min(Math.max(num, min), max);
+
+const App: FC = () => {
+  const initialSize = 9;
+  const [size, setSize] = useState<number>(initialSize);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const newSize = Number(e.target.value);
+
+    if (!Number.isNaN(newSize)) {
+      setSize(clamp(newSize, 0, 99));
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="Title" data-testid="title">Bounding box</div>
+        <input
+          type="text"
+          className="InputBox"
+          value={size}
+          onChange={handleChange}
+        />
       </header>
+      <Grid size={size} />
     </div>
   );
-}
+};
 
 export default App;
