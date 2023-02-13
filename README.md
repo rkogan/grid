@@ -2,13 +2,17 @@
 
 This application renders a clickable grid of tiles.
 
+## Demo Link
+
+Open [https://rkogan.github.io/grid/](https://rkogan.github.io/grid/) to view the app.
+
 ## Setup
 
-After cloning this repo, go to the project directory and run:
+First clone this repo, then go to the project directory and run:
 
 ### `npm install`
 
-## Running the Application
+## Running the Application Locally
 
 To start the application, run:
 
