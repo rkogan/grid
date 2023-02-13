@@ -1,0 +1,2 @@
+body{margin:0;overflow:hidden}.App{display:flex;flex-direction:column;height:100vh}.App-header{align-items:center;display:flex;flex-direction:row;font-size:calc(10px + 2vmin);justify-content:center;padding:20px}.Title{font-weight:700;margin-right:20px}.InputBox{width:50px}.Tile{border:1px solid red;height:100%;width:100%}.Tile--selected{background:red}.Row{display:flex;height:100%}
+/*# sourceMappingURL=main.c0f544ee.css.map*/
