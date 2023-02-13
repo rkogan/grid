@@ -6,21 +6,23 @@ const clamp = (num: number, min: number, max: number) =>
   Math.min(Math.max(num, min), max);
 
 const App: FC = () => {
-  const initialSize = 9;
+  const initialSize = 50;
   const [size, setSize] = useState<number>(initialSize);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newSize = Number(e.target.value);
 
     if (!Number.isNaN(newSize)) {
-      setSize(clamp(newSize, 0, 99));
+      setSize(clamp(newSize, 0, 500));
     }
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="Title" data-testid="title">Bounding box</div>
+        <div className="Title" data-testid="title">
+          Bounding box
+        </div>
         <input
           type="text"
           className="InputBox"
