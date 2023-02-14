@@ -53,12 +53,12 @@ const Grid: FC<GridProps> = ({ size }) => {
               key={`${row}_${col}`}
               isSelected={
                 minRow !== undefined &&
-                row >= minRow &&
                 maxRow !== undefined &&
-                row <= maxRow &&
                 minCol !== undefined &&
-                col >= minCol &&
                 maxCol !== undefined &&
+                row >= minRow &&
+                row <= maxRow &&
+                col >= minCol &&
                 col <= maxCol
               }
               onClick={clickHandler(row, col)}
