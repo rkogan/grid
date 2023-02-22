@@ -1,5 +1,5 @@
 import { FC, useState, ChangeEvent } from "react";
-import "./App.css";
+import "./App.scss";
 import Grid from "./components/Grid";
 
 const clamp = (num: number, min: number, max: number) =>
