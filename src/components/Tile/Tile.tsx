@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent } from "react";
+import { FC, MouseEvent } from "react";
 import classnames from "classnames";
 import "./Tile.scss";
 
